@@ -9,7 +9,7 @@
  *	Transport: http
  *	Authentication: none
  */
-require_once('../lib/nusoap.php');
+require_once(__DIR__ . '/../src/nusoap.php');
 /*
  *	Grab post vars, if present
  */
