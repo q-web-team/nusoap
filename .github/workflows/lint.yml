@@ -1,0 +1,16 @@
+name: "Linter"
+
+on:
+  pull_request:
+
+  push:
+    branches: [ "*" ]
+
+jobs:
+  lint:
+    name: "Linter"
+    uses: contributte/.github/.github/workflows/php.yml@v1
+    with:
+      name: "Linter"
+      run: "vendor/bin/parallel-lint src"
+      php: "8.0"

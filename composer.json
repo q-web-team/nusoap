@@ -24,11 +24,6 @@
   "autoload": {
     "classmap": ["src/"]
   },
-  "scripts": {
-    "linter": [
-      "parallel-lint src"
-    ]
-  },
   "extra": {
     "branch-alias": {
       "dev-master": "0.10.x-dev",
