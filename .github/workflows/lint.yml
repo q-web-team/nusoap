@@ -7,10 +7,18 @@ on:
     branches: [ "*" ]
 
 jobs:
-  lint:
+  lint82:
     name: "Linter"
     uses: contributte/.github/.github/workflows/php.yml@v1
     with:
       name: "Linter"
       run: "vendor/bin/parallel-lint src"
-      php: "8.0"
+      php: "8.2"
+
+  lint56:
+    name: "Linter"
+    uses: contributte/.github/.github/workflows/php.yml@v1
+    with:
+      name: "Linter"
+      run: "vendor/bin/parallel-lint src"
+      php: "5.6"
