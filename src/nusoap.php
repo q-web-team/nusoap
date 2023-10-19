@@ -6773,6 +6773,10 @@ class nusoap_parser extends nusoap_base
 
         // Check whether content has been read.
         if (!empty($xml)) {
+			$value = strstr($xml, "<soap:Envelope"); //gets all text from needle on
+			$value = strstr($value, "</soap:Envelope>", true); //gets all text before needle
+			$xml = '<?xml version="1.0" encoding="'.$this->xml_encoding.'" ?>'.$value.'</soap:Envelope>';
+
             // Check XML encoding
             $pos_xml = strpos($xml, '<?xml');
             if ($pos_xml !== false) {
